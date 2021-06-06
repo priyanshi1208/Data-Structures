@@ -38,4 +38,18 @@ public class LinkedList<E> {
             head=temp.next;
         }
     }
+    public void deleteValue(E delete){
+        Node<E> temp=head,prev=null;
+        if(temp.getData() ==delete){
+            head=temp.next;
+            return;
+        }
+        while(temp!=null && temp.getData() !=delete){
+            prev=temp;
+            temp=temp.next;
+        }
+        if(temp==null)
+            return;
+        prev.next=temp.next;
+    }
 }
