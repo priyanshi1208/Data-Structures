@@ -50,4 +50,14 @@ public class LinkedListTest {
         boolean  result = list.head.getData().equals(30)&&list.head.getNext().getData().equals(20);
         Assert.assertTrue(result);
     }
+    @Test
+    public void validating_if_linkedlist_can_pop_from_between() {
+        LinkedList<Integer> list=new LinkedList<>();
+        list.push(30);
+        list.append(10);
+        list.insertAtBetween(20,30);
+        list.deleteValue(20);
+        boolean  result = list.head.getData().equals(30)&&list.head.getNext().getData().equals(10);
+        Assert.assertTrue(result);
+    }
 }
