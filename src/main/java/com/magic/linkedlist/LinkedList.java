@@ -18,4 +18,16 @@ public class LinkedList<E> {
             temp.next=lastNode;
         }
     }
+    public void insertAtBetween(E data,E dataAfter){
+        Node<E> nodeAtBetween=new Node<>(data);
+        Node<E> temp=head;
+        while(temp!=null){
+            if(temp.getData() ==dataAfter){
+                nodeAtBetween.next=temp.next;
+                temp.next=nodeAtBetween;
+                return;
+            }
+            temp=temp.next;
+        }
+    }
 }
