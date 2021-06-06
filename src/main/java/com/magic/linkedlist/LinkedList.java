@@ -30,4 +30,12 @@ public class LinkedList<E> {
             temp=temp.next;
         }
     }
+    public void pop(){
+        if(head==null)
+            System.out.println("The list is empty");
+        else{
+            Node<E> temp=head;
+            head=temp.next;
+        }
+    }
 }
