@@ -60,4 +60,14 @@ public class LinkedListTest {
         boolean  result = list.head.getData().equals(30)&&list.head.getNext().getData().equals(10);
         Assert.assertTrue(result);
     }
+    @Test
+    public void validating_if_linkedlist_can_add_in_sorted_way() {
+        SortedLinkedList<Integer> list=new SortedLinkedList<>();
+        list.add(20);
+        list.add(10);
+        list.add(30);
+        boolean  result = list.head.getData().equals(10)&&list.head.getNext().getData().equals(20)&&list.head.getNext().getNext().data.equals(30);
+        Assert.assertTrue(result);
+    }
+
 }

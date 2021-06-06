@@ -66,4 +66,12 @@ public class LinkedList<E> {
         if(temp==null)
             System.out.println("Element not found in the list");
     }
+    public void printList(){
+        Node temp=head;
+        while (temp!=null){
+            System.out.print(temp.getData() +" ");
+            temp=temp.next;
+        }
+        System.out.println();
+    }
 }
