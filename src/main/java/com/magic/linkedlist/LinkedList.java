@@ -52,4 +52,18 @@ public class LinkedList<E> {
             return;
         prev.next=temp.next;
     }
+    public void search(E searchData){
+        Node<E> temp=head;
+        int count=0;
+        while(temp!=null){
+            count++;
+            if(temp.getData() ==searchData){
+                System.out.println("Element found at position:"+count);
+                return;
+            }
+            temp=temp.next;
+        }
+        if(temp==null)
+            System.out.println("Element not found in the list");
+    }
 }
